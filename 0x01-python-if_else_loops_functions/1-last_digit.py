@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-abs_number = abs(number)
-last_digit = abs_number % 10
+if number < 0:
+    last_digit = number % -10
+else:
+    last_digit = number % 10
 print("The last digit of")
 print(number)
 print("the sting is")
