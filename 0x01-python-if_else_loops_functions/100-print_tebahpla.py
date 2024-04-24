@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10, 10)
-if number > 0:
-    print(f"{number} is positive")
-elif number == 0:
-    print(f"{number} is zero")
-else:
-    print(f"{number} is negative")
+for i in range(ord('z'), ord('a') - 1, -1):
+    if i % 2 == 0:
+        diff = 0
+    else:
+        diff = 32
+    print('{}'.format(chr(i - diff)), end='')
+
