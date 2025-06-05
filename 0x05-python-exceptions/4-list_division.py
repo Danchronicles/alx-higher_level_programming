@@ -34,13 +34,13 @@ def list_division(my_list_1, my_list_2, list_length):
         except (TypeError, ValueError):
             # This handles cases where one or both elements are not intergers or floats
             
-            print("Wrong type")
+            print("wrong type")
             
         finally:
             # This block is always executed  before the try statements completes, regardless of wherther an exception was raised or handled.
             
-            pass
-        
-        # Append the result of the current division (either the calculated  value or 0.0 if an error occured to the list of results) 
-        new_results_list.append(current_division_result)
+            # Append the result of the current division (either the calculated  value or 0.0 if an error occured to the list of results) 
+            
+            new_results_list.append(current_division_result)
+    return new_results_list
             
