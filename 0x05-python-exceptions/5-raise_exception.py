@@ -4,5 +4,6 @@ def raise_exception():
     try:
         pass
     except TypeError:
-        pass
+        print("Exception raised")
+
     
