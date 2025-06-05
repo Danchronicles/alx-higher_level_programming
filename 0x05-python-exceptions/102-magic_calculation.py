@@ -1,11 +1,11 @@
-#!/usr/bin/python3
-
-def magic_calculation(a, b):
-    
+def bytecode_to_python(a, b):
     result = 0
-    for i in range (1, 3):
+    for i in range(1, 3):
         try:
-           result += (a ** b) / i
+            if i > a:
+                raise Exception("Too far")
+            result += (a ** b) / i
         except Exception:
-            return result
-         
+            result = b + a
+            break
+    return result
