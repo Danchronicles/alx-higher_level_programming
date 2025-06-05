@@ -10,7 +10,7 @@ def list_division(my_list_1, my_list_2, list_length):
         #initiliaze the current result for the current division to 0.0
         #This will be the default value if any error occurs
         
-        current_division_result = 0.0
+        results = 0.0
         
         try:
             #1, Access elements from both lists i.e "My_list[1] & my_list[2]"
@@ -19,7 +19,7 @@ def list_division(my_list_1, my_list_2, list_length):
             num1 = my_list_1[i]
             num2 = my_list_2[i]
             
-            current_division_result = num1 / num2
+            results = num1 / num2
             
         except IndexError:
             # This handles cases where "i" is greater than or equal to the length of my_list_1 or my_list_2.
@@ -41,6 +41,6 @@ def list_division(my_list_1, my_list_2, list_length):
             
             # Append the result of the current division (either the calculated  value or 0.0 if an error occured to the list of results) 
             
-            new_results_list.append(current_division_result)
+            new_results_list.append(results)
     return new_results_list
             
