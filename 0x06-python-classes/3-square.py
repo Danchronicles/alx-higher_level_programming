@@ -2,7 +2,6 @@
 
 class Square:
     def __init__(self, size=0):
-        pass
         """Defines a square with a private size attribute"""
         
         """Initializes a new square instance .
@@ -13,7 +12,7 @@ class Square:
         ValueError: If size is less than 0"""
         
         if not isinstance(size, int):
-            raise TypeError("size must be an interger")
+            raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
         
