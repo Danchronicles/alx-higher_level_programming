@@ -14,27 +14,26 @@ class Square:
         
         self.size = size
         
-        @property
-        def size(self):
-            """Retrieves the private instance attribute'_s9ze' """
+    @property
+    def size(self):
+            """Retrieves the private instance attribute'_size' """
             return self.__size
         
-        @size.setter
-        def size(self, value):
-            """Sets the size of the square with validation
-            
-            Args:
-            value(int):The new size for the square
-            
-            Raises:
-            TypeError: If a value is not an interger
-            ValueError: if a value is < 0
-            """
-            def size(self, value):
-                if not isinstance(value, int):
-                    raise TypeError("size be an interger")
-                if value < 0 :
-                    raise TypeError("size be > 0")
+    @size.setter
+    def size(self, value):
+        """Sets the size of the square with validation
+        
+        Args:
+        value(int):The new size for the square
+        
+        Raises:
+        TypeError: If a value is not an integer
+        ValueError: if a value is < 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("size be an interger")
+        if value < 0 :
+            raise TypeError("size must be > 0")
             self.__size = value
             
         def area (self):
