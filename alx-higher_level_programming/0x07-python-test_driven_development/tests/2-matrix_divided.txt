@@ -1,0 +1,56 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Test case 1: Normal division with integers
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+# Test case 2: Division with floats
+>>> matrix = [[1.5, 2.5, 3.5], [4.5, 5.5, 6.5]]
+>>> matrix_divided(matrix, 2)
+[[0.75, 1.25, 1.75], [2.25, 2.75, 3.25]]
+
+# Test case 3: Division by negative number
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, -3)
+[[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+# Test case 4: Error - Division by zero
+>>> matrix = [[1, 2], [3, 4]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+# Test case 5: Error - Invalid matrix (not a list of lists)
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+TypeError: matrix must be amatrix (list of lists) of intergers/floats
+
+# Test case 6: Error - Rows of different sizes
+>>> matrix = [[1, 2, 3], [4, 5]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+# Test case 7: Error - Non-number divisor
+>>> matrix = [[1, 2], [3, 4]]
+>>> matrix_divided(matrix, "2")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+# Test case 8: Error - Non-number in matrix
+>>> matrix = [[1, "2"], [3, 4]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of intergers/floats
+
+# Test case 9: Empty matrix
+>>> matrix = []
+>>> matrix_divided(matrix, 2)
+[]
+
+# Test case 10: Single row matrix
+>>> matrix = [[1, 2, 3]]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5]]
