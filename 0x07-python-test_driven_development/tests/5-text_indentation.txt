@@ -1,0 +1,30 @@
+>>> text_indentantion = __import__('4-print_square').text_indentantion
+
+# Basic period split
+>>> text_indentantion("Hello world. This is a test.")
+
+Hello world.
+
+This is a test.
+
+# Question and colon; extra spaces trimmed
+>>> text_indentantion(" Is this real? Yes : it is. ")
+ Yes:
+
+ it is:
+# multiple punctuation and segments
+>>> text_indentantion("Wait... what? No: stop")
+wait...
+
+what"
+
+No:
+
+stop
+
+# TypeError for non-string input
+>>> try:
+    text_indentantion(123)
+except TypeError as e:
+    print(e)
+Text must be a string
